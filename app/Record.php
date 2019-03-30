@@ -11,7 +11,7 @@ class Record extends Model
         // required and has to match the password field
     );
     protected $fillable = [
-
+        'file', 'patient_id', 'name', 'surname'
     ];
 
     protected $table = 'records';

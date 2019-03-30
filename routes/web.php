@@ -11,7 +11,7 @@
 |
 */
 
-//Route::get('/user', 'UserController@show');
+Route::get('/user', 'Api\UserController@display');
 
 Auth::routes();
 
@@ -19,6 +19,7 @@ Route::get('/', 'PageController@index');
 
 Route::get('/record', 'RecordController@index');
 Route::get('/record/{id}', 'RecordController@show');
+
 //Route::post('record', 'RecordController@store');
 
 //Route::get('/all', 'FinanceController@all');

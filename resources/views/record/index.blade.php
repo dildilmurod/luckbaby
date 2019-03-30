@@ -12,15 +12,20 @@
                     <div class="content table-responsive table-full-width">
                         <table class="table table-striped">
                             <thead>
-                            <th>ID</th>
+                            <th>Patient ID</th>
+                            <th>Name</th>
+                            <th>Surname</th>
                             <th>Action</th>
                             </thead>
                             <tbody>
                             @foreach($records as $record)
                             <tr>
-                                <td>{{$record->id}}</td>
-                                <td><a href="/record/{{$record->id}}">Open</a></td>
+                                <td>{{$record->patient_id}}</td>
+                                <td>{{$record->name}}</td>
+                                <td>{{$record->surname}}</td>
+                                <td><a class="btn btn-link" href="/record/{{$record->id}}">Open</a></td>
                             </tr>
+
                                 @endforeach
 
                             </tbody>

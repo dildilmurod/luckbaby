@@ -16,6 +16,7 @@ class RecordController extends Controller
      */
     public function __construct()
     {
+        //$this->middleware('auth:api', ['except'=>['index, show, update, edit']]);
         $this->middleware('auth', ['except'=>['store']]);
     }
 
@@ -63,6 +64,9 @@ class RecordController extends Controller
         $formInput = $request->except(['file']);
         $this->validate($request, [
             //'file' => 'file|mimes:wav|max:1000000',
+            'name'=>'required',
+            'surname'=>'required',
+            'patient_id'=>'required',
             'file' => 'required|mimes:mpga',
 
         ]);
